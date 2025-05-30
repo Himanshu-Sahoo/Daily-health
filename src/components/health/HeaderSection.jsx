@@ -1,22 +1,40 @@
-import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
-// import heroImage from "/assets/hero.jpg" // Use your image
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  Box,
+  IconButton,
+} from "@mui/material";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import LanguageIcon from "@mui/icons-material/Language";
 
 export default function HeaderSection() {
   return (
-    <>
-      <AppBar position="static" color="default" elevation={0}>
-        <Toolbar sx={{ justifyContent: "space-between" }}>
-          <Typography variant="h6">LOGO</Typography>
-          <Box sx={{ display: 'flex', gap: 2 }}>
-            <Button>Home</Button>
-            <Button>Tips & Articles</Button>
-            <Button>Modules</Button>
-          </Box>
-          <Button color="error" variant="outlined">Logout</Button>
-        </Toolbar>
-      </AppBar>
+    <AppBar position="static" elevation={0} sx={{ backgroundColor: "#fff", color: "#000" }}>
+      <Toolbar sx={{ justifyContent: "space-between" }}>
+        <Typography variant="h6"  sx={{ fontWeight: "bold" }}>LOGO</Typography>
+        <Box sx={{ flexGrow: 1 }} />
+        <Box sx={{ display: "flex",  alignItems: "center" }}>
+          <Button color="inherit" sx={{ fontWeight: "bold" }}>Home</Button>
+          <Button color="inherit" sx={{ fontWeight: "bold" }}>Tips & Articles</Button>
+          <Button color="inherit" sx={{ fontWeight: "bold" }}>Modules</Button>
 
-    
-    </>
+          <IconButton color="inherit" sx={{ color: "green" }}>
+            <AccountCircleIcon />
+          </IconButton>
+          <IconButton color="inherit" sx={{ color: "green" }}>
+            <NotificationsIcon />
+          </IconButton>
+          <IconButton color="inherit" sx={{ color: "green" }}>
+            <LanguageIcon />
+          </IconButton>
+
+          <Button color="error" variant="outlined" sx={{ fontWeight: "bold" }}>Logout</Button>
+          
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 }
