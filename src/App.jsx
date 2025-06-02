@@ -1,5 +1,5 @@
 import React from 'react'
-import HealthHomePage from './pages/HealthHomePage';
+import OverView from './pages/Health/Overview';
 
 
 
@@ -9,7 +9,8 @@ function App() {
 
   return (
     <>
-  <HealthHomePage />
+  {/* <HealthHomePage /> */}
+   <OverView />
 
     </>
   )
